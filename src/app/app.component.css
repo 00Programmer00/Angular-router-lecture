@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.navigation button {
+  margin: 10px;
+}
+
+.active {
+  background: #F93F82;
+}

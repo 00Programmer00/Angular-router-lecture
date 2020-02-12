@@ -1,1 +1,19 @@
-<p>user works!</p>
+<mat-spinner class='center' *ngIf='showSpinner'></mat-spinner>
+<button (click)='back()'>Go Back</button>
+<mat-tab-group *ngIf='!showSpinner'>
+  <mat-tab label="User Name">
+    <div class='content'>
+      {{user.name}}
+    </div>
+  </mat-tab>
+  <mat-tab label="User Phone">
+    <div class='content'>
+      {{user.phoneNumber}}
+    </div>
+  </mat-tab>
+  <mat-tab label="User Email">
+    <div class='content'>
+      {{user.email}}
+    </div>
+  </mat-tab>
+</mat-tab-group>
