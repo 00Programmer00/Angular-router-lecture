@@ -1,4 +1,5 @@
-<mat-nav-list>
+<mat-spinner class='center' *ngIf='showSpinner'></mat-spinner>
+<mat-nav-list *ngIf='!showSpinner'>
   <mat-list-item *ngFor="let user of users">
     <a matLine [routerLink]="['/user', user.id]">{{ user.name }}</a>
   </mat-list-item>

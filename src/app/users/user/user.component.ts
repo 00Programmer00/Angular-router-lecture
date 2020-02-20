@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { userList } from '../../data/users';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import { UserService } from '../users.service';
 
@@ -26,13 +25,9 @@ export class UserComponent implements OnInit {
     console.log(this.route);
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.service.get(id).subscribe(data => {
-      console.log('DD2: ', data)
-    })
-    // setTimeout(() => {
-    //   // @ts-ignore
-    //   this.user = userList[id - 1];
-    //   this.showSpinner = false;
-    // }, 3000);
+      this.user = data;
+      this.showSpinner = false;
+    });
   }
 
 }

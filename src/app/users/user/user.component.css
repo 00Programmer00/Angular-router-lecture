@@ -14,3 +14,15 @@
 .center {
   margin: 0 auto;
 }
+
+.back {
+  background: url('../../../assets/images/go-back.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border: none;
+}
+
+.back:hover {
+  cursor: pointer;
+}

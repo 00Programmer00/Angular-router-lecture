@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'user/:id', component: UserComponent, canActivate: [AuthGuard]},
   {path: 'else', component: ElseComponent, canActivate: [AuthGuard]},
   {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: '', redirectTo: '/users', pathMatch: 'full'},
   {path: '**', component: NotFoundPageComponent}
 ];
 

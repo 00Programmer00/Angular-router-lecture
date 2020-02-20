@@ -7,13 +7,15 @@ import { UserService } from './users.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users: any
+  users: any;
+  showSpinner = true;
 
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
     this.service.getAll().subscribe((data) => {
       this.users = data;
+      this.showSpinner = false;
     });
   }
 

@@ -1,5 +1,5 @@
 <mat-spinner class='center' *ngIf='showSpinner'></mat-spinner>
-<button (click)='back()'>Go Back</button>
+<button class='back' (click)='back()'></button>
 <mat-tab-group *ngIf='!showSpinner'>
   <mat-tab label="User Name">
     <div class='content'>
@@ -8,7 +8,7 @@
   </mat-tab>
   <mat-tab label="User Phone">
     <div class='content'>
-      {{user.phoneNumber}}
+      {{user.phone}}
     </div>
   </mat-tab>
   <mat-tab label="User Email">
