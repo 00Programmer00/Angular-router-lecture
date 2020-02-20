@@ -13,6 +13,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './users/users.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     MatButtonModule,
     MatListModule,
     MatProgressSpinnerModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
